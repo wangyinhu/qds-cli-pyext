@@ -1,0 +1,9 @@
+*.pyc
+myvenv/
+venv/
+.idea/
+cmake-build-debug/
+cmake-build-release/
+*.so
+*.log
+test.py
