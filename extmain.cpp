@@ -53,6 +53,7 @@ static PyObject *QdsPyCli_new(PyTypeObject * type, PyObject * args, PyObject * k
 }
 
 static void QdsCli_dealloc(QdsPyCli *self) {
+    printf("QdsCli_dealloc called.\n");
 	delete self->cli;
 	Py_TYPE(self)->tp_free((PyObject *) self);
 }

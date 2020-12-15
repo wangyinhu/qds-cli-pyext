@@ -14,6 +14,8 @@ typedef int (*pack_process)(uint64_t _did, uint16_t _cid, uint8_t *data, size_t 
 class QdsClient : public qdsport {
     int noticeflag = 0;
     int noticewaittimer = 0;
+    struct hostent *server;
+    struct sockaddr_in serv_addr;
 public:
     QdsClient(uint64_t _did, uint16_t _cid, const uint8_t *aesk, int Qdsport, const char *host);
 

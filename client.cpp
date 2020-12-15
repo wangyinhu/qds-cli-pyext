@@ -19,8 +19,6 @@
 QdsClient::QdsClient(const uint64_t _did, const uint16_t _cid, const uint8_t *aesk, const int Qdsport, const char *host):
 	qdsport(_did, _cid, aesk)
 {
-	struct sockaddr_in serv_addr;
-	struct hostent *server;
 	/* Create a socket point */
 	sockfd = socket(AF_INET, SOCK_STREAM, 0);
 	if (sockfd < 0) {
